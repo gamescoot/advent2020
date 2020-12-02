@@ -1,5 +1,3 @@
-# Day1 p1
-import day1.day1.py
 def part1(numFind, x):
     f = open("day1", "r")
     pastNums = {}
@@ -24,5 +22,5 @@ def part2(numFind):
         if p1 is not None:
             return (p1*int(firstNumString))
         x+=1
-
+print(part1(2020,-1))
 print(part2(2020))
