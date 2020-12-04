@@ -18,11 +18,12 @@ def part1(horizontal_travel, vertical_travel):
     for pos in range(step_count):
         # Get the character we need from the file text and compare it to # then cast the resulting bool to an int to add
         # either 0 if it's . or 1 if it's #. We will decide what character from the string to get each step by using an
-        # equation. The equation is just using the line slope f(x) = x * travel_distance to traverse the slope, but
-        # eventually we will hit the edge of the text and need to wrap around like pacman. To wrap around we determine
-        # how many times we've needed to wrap so far by doing int((pos * horizontal_travel) / slope_width) and then
-        # we multiply that by slope_width to determine how much we need to subtract to wrap around. Then we
-        # subtract the width we determined from the original line slope to wrap back around.
+        # equation. The equation is just using the line slope function f(x) = x * travel_distance to traverse the slope
+        # and then subtracting out a step function to wrap around. The line slope works well by itself but eventually we
+        # will hit the edge of the text and need to wrap around like pacman. To wrap around we determine how many times
+        # we've  needed to wrap so far by doing int((pos * horizontal_travel) / slope_width) and then we multiply that
+        # by the slope_width to determine how much we need to subtract to wrap around. Then we subtract the step
+        # function from the original line slope function to wrap back around.
         tree_count += int(FILE_TEXT[pos * travel_dist - int((pos * horizontal_travel)/slope_width)*slope_width] == '#')
     return tree_count
 
