@@ -4,8 +4,7 @@ import re
 # Day 4: Password Processing
 
 # Read the file as always.
-FILE_NAME = 'input'
-FILE_TEXT = advent_util.read_file(FILE_NAME)
+FILE_TEXT = advent_util.read_file()
 
 # Separate the passports into separate strings for processing.
 PASSPORTS = FILE_TEXT.split('\n\n')
