@@ -1,5 +1,4 @@
 import advent_util
-import time
 
 FILE_TEXT = advent_util.read_file()
 
